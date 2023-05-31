@@ -14,6 +14,20 @@ class CartItem extends React.Component {
 
   increaseQuantity = () =>{
     console.log('this',this.state);
+
+    // // setState form   method 1
+    // this.setState({
+    //   qty: this.state.qty + 1
+    // });
+
+    // setState form metdod 2
+    this.setState((prevState) => {
+      return {
+        qty: prevState.qty + 1
+      }
+    });
+
+
   }
 
   render () {
@@ -56,4 +70,4 @@ const styles = {
   }
 }
 
-export default CartItem;~
+export default CartItem;
